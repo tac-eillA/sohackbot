@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[
+  
 # SoHacks Bot
 This is a simple easy to use and modify slack bot set up to do
 event handling via bang commands
@@ -8,6 +8,7 @@ Clone git repo and you are done, all modules included
 ## Usage
 From the terminal or the node command prompt run:
 > node bot.js
+
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -25,6 +26,5 @@ From the terminal or the node command prompt run:
 Trevor Snodgrass
 ## License
 GPLv2
-]]></content>
-  <tabTrigger>readme</tabTrigger>
+
 </snippet>
