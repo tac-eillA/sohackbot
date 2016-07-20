@@ -18,7 +18,7 @@ From the terminal or the node command prompt run:
 
 ## History
 1.1.1
-> added timer command
+> added countdown command
 
 1.1.0
 > cleaned up comments and added license
