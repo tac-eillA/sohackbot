@@ -1,7 +1,7 @@
 
 
 //add slack token to give access to channel
-var slackToken = 'xoxb-60352104566-nfbp7ZX6QJl2QjaFsSfoEvjp';
+var slackToken = '';
 
 //import required libraries
 var Botkit = require('botkit');
