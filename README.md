@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-# ${1:SoHacks Bot}
+# SoHacks Bot
 This is a simple easy to use and modify slack bot set up to do
 event handling via bang commands
 ## Installation
