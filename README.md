@@ -22,6 +22,7 @@ From the terminal or the node command prompt run:
 > cleaned up comments and added license
 1.0.0
 > initial version of the bot
+
 ## Credits
 Trevor Snodgrass
 ## License
