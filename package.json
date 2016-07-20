@@ -1,0 +1,16 @@
+{
+  "name": "slackbot",
+  "version": "1.0.0",
+  "description": "a basic bot for slack to help answer questions for sohacks attendees",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trevor Snodgrass",
+  "license": "ISC",
+  "dependencies": {
+    "botkit": "^0.2.2",
+    "slack-node": "^0.2.0",
+    "slackbots": "^0.5.1"
+  }
+}
