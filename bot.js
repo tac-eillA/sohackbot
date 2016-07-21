@@ -55,7 +55,7 @@ sender.on('start', function(){
 	var params = {
 		icon_emoji: ':floppy_disk:'
 	};
-	sender.postMessageToChannel('general', 'Welcome to SoHack 2016!', params);
+	//sender.postMessageToChannel('general', 'Welcome to SoHack 2016!', params);
 });
 
 // this was being funny with scope so I added a global instance
@@ -78,6 +78,7 @@ listener.hears('!help (.*)',['direct_message','direct_mention','mention'],functi
 	bot.reply(message, 'You have requested help, the mentors have been notified and you will be contacted shortly.');
 	bot.api.users.info({user: message.user}, function(err, info){
 		sender.postMessageToChannel('mentor', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', params);
+		bot.api.chat.postMessage(slackToken, 'privatetest', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '');
 	});
 	
 });
@@ -106,6 +107,8 @@ listener.hears('!submit',['direct_message','direct_mention','mention'],function(
 	bot.reply(message, 'Your question has been sent to the mentors');
 	bot.api.users.info({user: message.user}, function(err, info){
 		sender.postMessageToChannel('mentor', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', params);
+		bot.api.chat.postMessage(slackToken, 'privatetest', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '');
+
 	});
 
 });
