@@ -77,8 +77,8 @@ listener.hears('!info',['direct_message','direct_mention','mention'],function(bo
 listener.hears('!help (.*)',['direct_message','direct_mention','mention'],function(bot,message){
 	bot.reply(message, 'You have requested help, the mentors have been notified and you will be contacted shortly.');
 	bot.api.users.info({user: message.user}, function(err, info){
-		sender.postMessageToChannel('mentor', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', params);
-		bot.api.chat.postMessage(slackToken, 'privatetest', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '');
+		bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentor', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
+		bot.api.chat.postMessage({'token': slackToken, 'channel': 'privatetest', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
 	});
 	
 });
@@ -106,8 +106,8 @@ listener.hears('!countdown',['direct_message','direct_mention','mention'],functi
 listener.hears('!submit',['direct_message','direct_mention','mention'],function(bot,message){
 	bot.reply(message, 'Your question has been sent to the mentors');
 	bot.api.users.info({user: message.user}, function(err, info){
-		sender.postMessageToChannel('mentor', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', params);
-		bot.api.chat.postMessage(slackToken, 'privatetest', 'User: ' + info.user.name+ ' has a question:\n' + message.text + '');
+		bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentor', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
+		bot.api.chat.postMessage({'token': slackToken, 'channel': 'privatetest', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
 
 	});
 
