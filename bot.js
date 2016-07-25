@@ -24,12 +24,14 @@
   * ******************************************************/
 //add slack token to give access to channel
 /* NOTE, REMEMBER TO REMOVE TOKEN BEFORE UPLOADING TO GITHUB */
-var slackToken = '';
+var slackToken = 'xoxb-60352104566-fDxWCH5VtGag86CkTeCW2xmD';
 
 //import required libraries
 var Botkit = require('botkit');
 var Slackbot = require('slackbots');
 var countdown = require('countdown');
+
+var innapropriatelanguage = ['fuck', 'shit', 'bitch', 'asshole', 'damn', 'dick', 'anus', 'arse', 'ass', 'balls', 'ballsack', 'bastard', 'biatch', 'blowjob', 'blow job', 'boner', 'boob', 'buttplug', 'clitoris', 'cock', 'cunt', 'dildo', 'dyke', 'fag', 'f u c k', 'homo', 'nigger', 'pussy', 'queer', 'vagina', 'whore', 'slut'];
 
 // create listener
 var listener = Botkit.slackbot({
@@ -67,6 +69,12 @@ var params = {
  * 						COMMANDS
  * *******************************************************/
 
+ listener.on('team_join', function(bot,message){
+ 	bot.api.users.info({user: message.user}, function(err, info){
+ 		bot.startPrivateConversation(message, 'Welcome to the SoHacks Slack Channel!\nTo get started, type !commands into the chat as a direct message to sohacksbot!');
+ 	});
+ });
+
 //listens for info command and posts the list of frequently asked questions
 listener.hears('!info',['direct_message','direct_mention','mention'],function(bot,message){
 	bot.reply(message, '*Hi thank you for asking SoHacks Bot for the frequently asked questions!*\n\n*What if I don\'t have a team?*\nTeams are not required to participate for prizes. If you have a team, the max number of participents is 4 people.\n*How do I get help from a mentor?*\nThere are two ways to get in contact with a mentor, either you can physcially find one or by sending a message to SoHacks Bot simply containing !help and the language you need help with/problem and a mentor will get in contact with you!\n*I want to build ____, how do I do it?*\nWe recommend that all beginner coders attend workshops in order to gain the basics needed to create a hack. If you have any problems or questions please contact a mentor.\n*How can I sign up for workshops?*\nSign ups will be done through the devpost website\n*How do I connect to Wifi/ my wifi isn\’t working?*\nA password will be given out at opening ceremonies for the wifi. If you still have problems please go to the check in table for help or find a mentor.\n*My laptop isn\’t working*\nAsk others around you for help or go to the laptop check out area for a loaner laptop.\n*How do I submit my hack?*\nOn Devpost you can submit a hack. There you make an account and register for SoHacks. Come submission you can upload your project and please fill out all of the questions to the best of your ability.\n*Who do I talk to if I need urgent help?*\nIf you need immediate help ask a mentor or a volunteer. If you cannot find them ask one of the SoHacks team members or go to the check in table.\n*Have a question you don\'t see an answer to?*\nPost it in the general slack page, mentors and volunteers will frequent the chat. Or you can find one out in the wild and ask them there!');
@@ -78,7 +86,7 @@ listener.hears('!help (.*)',['direct_message','direct_mention','mention'],functi
 	bot.reply(message, 'You have requested help, the mentors have been notified and you will be contacted shortly.');
 	bot.api.users.info({user: message.user}, function(err, info){
 	bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentorchannel', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', 'username': 'SoHacks Bot', 'icon_emoji': ':floppy_disk:'});		
-b	ot.api.chat.postMessage({'token': slackToken, 'channel': 'privatetest', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
+	bot.api.chat.postMessage({'token': slackToken, 'channel': 'privatetest', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
 	});
 	
 });
@@ -103,7 +111,7 @@ listener.hears('!countdown',['direct_message','direct_mention','mention'],functi
 });
 
 // this listens for a unique question and sends it to the mentor channel so that they can get in touch with the student
-listener.hears('!submit',['direct_message','direct_mention','mention'],function(bot,message){
+listener.hears('!submit (.*)',['direct_message','direct_mention','mention'],function(bot,message){
 	bot.reply(message, 'Your question has been sent to the mentors');
 	bot.api.users.info({user: message.user}, function(err, info){
 		bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentorchannel', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', 'username': 'SoHacks Bot', 'icon_emoji': ':floppy_disk:'});
@@ -126,6 +134,28 @@ listener.hears('!warning',['direct_message','direct_mention','mention'],function
 // I'm considering making a second specifically for the mentor channel with some extended commands
 listener.hears('!commands',['direct_message','direct_mention','mention'],function(bot,message){
 	bot.reply(message, '*Here is a list of the general commands, all of these should be preceded by an exclamation point (!) and sent to SoHacksBot via a direct message.*\ninfo -- displays the frequently asked questions\nhelp -- sends message to mentors and should be followed by the language you are using\ntools -- gives you a list of useful programming tools\nsubmit -- if you have a question not related to your project, like when something is, this will ask the mentors that.\nentertainment -- this is just a placeholder if we add anything fun but could change\nwarning -- issues a general warning regarding language to the chat\ncountdown -- timer telling you how ling until submissions are closed');
+
+});
+
+// profanity filter
+listener.hears(innapropriatelanguage,['direct_message','direct_mention','mention', 'message_received'],function(bot,message){
+	bot.reply(message, 'Foul or inappropriate language will not be tolerated in the chat');
+	bot.api.chat.delete({'token': slackToken, 'ts': message.ts, 'channel': message.channel});
+
+});
+
+//mass notification
+listener.hears('!notify (.*)',['direct_message','direct_mention','mention'],function(bot,message){
+	bot.api.users.info({user: message.user}, function(err, info){
+	if(info.user.name === 'jsinger5015' || info.user.name === 'trevorsnodgrass') {
+		var string = message.text;
+		var string2 = string.substring(string.indexOf('y') + 2);
+		console.log(string2);
+		console.log(typeof(string2));
+		sender.postMessageToChannel('general', '@everyone ' + string2, params);
+	}
+
+	});
 
 });
 
