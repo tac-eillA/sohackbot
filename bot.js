@@ -24,7 +24,7 @@
   * ******************************************************/
 //add slack token to give access to channel
 /* NOTE, REMEMBER TO REMOVE TOKEN BEFORE UPLOADING TO GITHUB */
-var slackToken = 'xoxb-60352104566-fDxWCH5VtGag86CkTeCW2xmD';
+var slackToken = '';
 
 //import required libraries
 var Botkit = require('botkit');
@@ -85,8 +85,7 @@ listener.hears('!info',['direct_message','direct_mention','mention'],function(bo
 listener.hears('!help (.*)',['direct_message','direct_mention','mention'],function(bot,message){
 	bot.reply(message, 'You have requested help, the mentors have been notified and you will be contacted shortly.');
 	bot.api.users.info({user: message.user}, function(err, info){
-	bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentorchannel', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', 'username': 'SoHacks Bot', 'icon_emoji': ':floppy_disk:'});		
-	bot.api.chat.postMessage({'token': slackToken, 'channel': 'privatetest', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
+	bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentors', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', 'username': 'SoHacks Bot', 'icon_emoji': ':floppy_disk:'});		
 	});
 	
 });
@@ -114,8 +113,7 @@ listener.hears('!countdown',['direct_message','direct_mention','mention'],functi
 listener.hears('!submit (.*)',['direct_message','direct_mention','mention'],function(bot,message){
 	bot.reply(message, 'Your question has been sent to the mentors');
 	bot.api.users.info({user: message.user}, function(err, info){
-		bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentorchannel', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', 'username': 'SoHacks Bot', 'icon_emoji': ':floppy_disk:'});
-		bot.api.chat.postMessage({'token': slackToken, 'channel': 'privatetest', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + ''});
+		bot.api.chat.postMessage({'token': slackToken, 'channel': 'mentors', 'text': 'User: ' + info.user.name+ ' has a question:\n' + message.text + '', 'username': 'SoHacks Bot', 'icon_emoji': ':floppy_disk:'});
 
 	});
 
