@@ -1,0 +1,180 @@
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+info: ** Setting up custom handlers for processing Slack messages
+info: ** API CALL: https://slack.com/api/rtm.start
+notice: ** BOT ID: sohackbot ...attempting to connect to RTM!
+notice: RTM websocket opened
+
+/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/howler/dist/howler.js:1849
+        self._node = new Audio();
+                         ^
+ReferenceError: Audio is not defined
+    at Object.Sound.create (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/howler/dist/howler.js:1849:26)
+    at Object.Sound.init (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/howler/dist/howler.js:1828:12)
+    at Object.Sound.reset.self [as init] (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/howler/dist/howler.js:2673:14)
+    at Object.Sound (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/howler/dist/howler.js:1799:10)
+    at Object.Howl._inactiveSound (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/howler/dist/howler.js:1678:14)
+    at Object.Howl.play (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/howler/dist/howler.js:583:51)
+    at Object.<anonymous> (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/bot.js:169:9)
+    at Object.<anonymous> (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/botkit/lib/CoreBot.js:753:28)
+    at Object.Botkit.botkit.trigger (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/botkit/lib/CoreBot.js:779:49)
+    at Object.<anonymous> (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/botkit/lib/SlackBot.js:589:34)
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+info: ** Setting up custom handlers for processing Slack messages
+info: ** API CALL: https://slack.com/api/rtm.start
+notice: ** BOT ID: sohackbot ...attempting to connect to RTM!
+notice: RTM websocket opened
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+info: ** Setting up custom handlers for processing Slack messages
+info: ** API CALL: https://slack.com/api/rtm.start
+notice: ** BOT ID: sohackbot ...attempting to connect to RTM!
+notice: RTM websocket opened
+info: ** API CALL: https://slack.com/api/users.info
+info: [Start]  0  Task for  { id: 'U1Y1GACP5',
+  team_id: 'T1V14HHQD',
+  name: 'optimizedefficiency',
+  deleted: false,
+  status: null,
+  color: '3c989f',
+  real_name: 'Tyler Xu',
+  tz: 'America/Los_Angeles',
+  tz_label: 'Pacific Daylight Time',
+  tz_offset: -25200,
+  profile: 
+   { first_name: 'Tyler',
+     last_name: 'Xu',
+     avatar_hash: 'g1b441c6fb42',
+     real_name: 'Tyler Xu',
+     real_name_normalized: 'Tyler Xu',
+     email: 'tyler.y.xu@hotmail.com',
+     image_24: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-24.png',
+     image_32: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-32.png',
+     image_48: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-48.png',
+     image_72: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-72.png',
+     image_192: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-192.png',
+     image_512: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-512.png',
+     fields: null },
+  is_admin: false,
+  is_owner: false,
+  is_primary_owner: false,
+  is_restricted: false,
+  is_ultra_restricted: false,
+  is_bot: false,
+  presence: 'away' } in undefined
+info: >   [Start]  0  Conversation with  { id: 'U1Y1GACP5',
+  team_id: 'T1V14HHQD',
+  name: 'optimizedefficiency',
+  deleted: false,
+  status: null,
+  color: '3c989f',
+  real_name: 'Tyler Xu',
+  tz: 'America/Los_Angeles',
+  tz_label: 'Pacific Daylight Time',
+  tz_offset: -25200,
+  profile: 
+   { first_name: 'Tyler',
+     last_name: 'Xu',
+     avatar_hash: 'g1b441c6fb42',
+     real_name: 'Tyler Xu',
+     real_name_normalized: 'Tyler Xu',
+     email: 'tyler.y.xu@hotmail.com',
+     image_24: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-24.png',
+     image_32: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-32.png',
+     image_48: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-48.png',
+     image_72: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-72.png',
+     image_192: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-192.png',
+     image_512: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-512.png',
+     fields: null },
+  is_admin: false,
+  is_owner: false,
+  is_primary_owner: false,
+  is_restricted: false,
+  is_ultra_restricted: false,
+  is_bot: false,
+  presence: 'away' } in undefined
+info: ** API CALL: https://slack.com/api/im.open
+info: >   [End]  0  Conversation with  { id: 'U1Y1GACP5',
+  team_id: 'T1V14HHQD',
+  name: 'optimizedefficiency',
+  deleted: false,
+  status: null,
+  color: '3c989f',
+  real_name: 'Tyler Xu',
+  tz: 'America/Los_Angeles',
+  tz_label: 'Pacific Daylight Time',
+  tz_offset: -25200,
+  profile: 
+   { first_name: 'Tyler',
+     last_name: 'Xu',
+     avatar_hash: 'g1b441c6fb42',
+     real_name: 'Tyler Xu',
+     real_name_normalized: 'Tyler Xu',
+     email: 'tyler.y.xu@hotmail.com',
+     image_24: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-24.png',
+     image_32: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-32.png',
+     image_48: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-48.png',
+     image_72: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-72.png',
+     image_192: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-192.png',
+     image_512: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-512.png',
+     fields: null },
+  is_admin: false,
+  is_owner: false,
+  is_primary_owner: false,
+  is_restricted: false,
+  is_ultra_restricted: false,
+  is_bot: false,
+  presence: 'away' } in undefined
+info: [End]  0  Task for  { id: 'U1Y1GACP5',
+  team_id: 'T1V14HHQD',
+  name: 'optimizedefficiency',
+  deleted: false,
+  status: null,
+  color: '3c989f',
+  real_name: 'Tyler Xu',
+  tz: 'America/Los_Angeles',
+  tz_label: 'Pacific Daylight Time',
+  tz_offset: -25200,
+  profile: 
+   { first_name: 'Tyler',
+     last_name: 'Xu',
+     avatar_hash: 'g1b441c6fb42',
+     real_name: 'Tyler Xu',
+     real_name_normalized: 'Tyler Xu',
+     email: 'tyler.y.xu@hotmail.com',
+     image_24: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-24.png',
+     image_32: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-32.png',
+     image_48: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-48.png',
+     image_72: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-72.png',
+     image_192: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-192.png',
+     image_512: 'https://secure.gravatar.com/avatar/1b441c6fb4241b4ae00e04a04c5560fb.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-512.png',
+     fields: null },
+  is_admin: false,
+  is_owner: false,
+  is_primary_owner: false,
+  is_restricted: false,
+  is_ultra_restricted: false,
+  is_bot: false,
+  presence: 'away' } in undefined
+
+TypeError: string is not a function
+    at /var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/botkit/lib/Slackbot_worker.js:267:17
+    at /var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/botkit/lib/Slackbot_worker.js:281:29
+    at Request._callback (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/botkit/lib/Slack_web_api.js:29:33)
+    at Request.self.callback (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/request/request.js:187:22)
+    at Request.emit (events.js:98:17)
+    at Request.<anonymous> (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/request/request.js:1044:10)
+    at Request.emit (events.js:95:17)
+    at IncomingMessage.<anonymous> (/var/lib/openshift/578f40ff7628e12f010001f2/app-deployments/2016-07-20_05-14-48.831/sohackbot/node_modules/request/request.js:965:12)
+    at IncomingMessage.emit (events.js:117:20)
+    at _stream_readable.js:944:16
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+info: ** Setting up custom handlers for processing Slack messages
+info: ** API CALL: https://slack.com/api/rtm.start
+notice: ** BOT ID: sohackbot ...attempting to connect to RTM!
+notice: RTM websocket opened
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+info: ** Setting up custom handlers for processing Slack messages
+info: ** API CALL: https://slack.com/api/rtm.start
+notice: ** BOT ID: sohackbot ...attempting to connect to RTM!
+notice: RTM websocket opened
+info: ** API CALL: https://slack.com/api/users.info
+info: ** API CALL: https://slack.com/api/chat.postMessage
