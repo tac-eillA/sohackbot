@@ -17,6 +17,9 @@ From the terminal or the node command prompt run:
 5. Submit a pull request :D
 
 ## History
+1.1.4
+> fixed some formatting when it came to messages
+
 1.1.3
 > added profanity filter, cleaned up for official channel use, and added some automation
 
